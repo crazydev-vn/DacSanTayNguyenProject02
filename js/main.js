@@ -19,7 +19,7 @@ function initProductFilter() {
         const selectedPrice = priceSelect ? priceSelect.value : 'all';
 
         productCards.forEach(card => {
-            // Lấy thông tin từ thẻ sản phẩm
+            // Lấy thông tin tiêu đề và giá sản phẩm
             const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
             const priceText = card.querySelector('.price')?.textContent || '0';
             const priceValue = parseInt(priceText.replace(/\D/g, ''), 10) || 0;
@@ -27,18 +27,18 @@ function initProductFilter() {
             let matchesCategory = false;
             let matchesPrice = false;
 
-            // Kiểm tra danh mục
+            // 1. Kiểm tra danh mục theo dữ liệu sản phẩm thực tế
             if (selectedCategory === 'all') {
                 matchesCategory = true;
             } else if (selectedCategory === 'coffee' && title.includes('cà phê')) {
                 matchesCategory = true;
-            } else if (selectedCategory === 'nuts' && (title.includes('mắc ca') || title.includes('macca'))) {
+            } else if (selectedCategory === 'nuts' && (title.includes('mắc ca') || title.includes('macca') || title.includes('bơ'))) {
                 matchesCategory = true;
-            } else if (selectedCategory === 'spices' && title.includes('tiêu')) {
+            } else if (selectedCategory === 'spices' && (title.includes('tiêu') || title.includes('mật ong'))) {
                 matchesCategory = true;
             }
 
-            // Kiểm tra khoảng giá
+            // 2. Kiểm tra khoảng giá
             if (selectedPrice === 'all') {
                 matchesPrice = true;
             } else if (selectedPrice === 'under-150' && priceValue < 150000) {
@@ -47,7 +47,7 @@ function initProductFilter() {
                 matchesPrice = true;
             }
 
-            // Hiển thị hoặc ẩn thẻ sản phẩm dựa trên kết quả lọc
+            // Hiển thị hoặc ẩn thẻ sản phẩm
             if (matchesCategory && matchesPrice) {
                 card.style.display = 'flex';
             } else {
@@ -70,10 +70,10 @@ function initContactForm() {
 
         const fullname = document.getElementById('fullname')?.value;
 
-        // Thông báo gửi thành công đơn giản
+        // Thông báo gửi thành công
         alert(`Cảm ơn bạn ${fullname}! Yêu cầu tư vấn/đặt hàng đã được gửi thành công. Chúng tôi sẽ liên hệ lại sớm nhất.`);
 
-        // Reset form về trạng thái ban đầu
+        // Reset form
         contactForm.reset();
     });
 }
