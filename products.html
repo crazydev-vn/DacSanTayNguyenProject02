@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Đặc Sản Tây Nguyên | Sản Phẩm Chất Lượng</title>
+    <meta name="description"
+        content="Danh sách đầy đủ đặc sản Tây Nguyên chính hiệu: Cà phê, Mật ong, Mắc ca, Tiêu Đắk Nông, Bơ sáp Đắk Lắk, Thổ Cẩm.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="brand">
+                <h1 class="brand-title">Đặc Sản Tây Nguyên</h1>
+                <span class="brand-slogan">Tinh hoa núi rừng trong từng sản phẩm</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="products.html" class="active">Sản phẩm</a></li>
+                    <li><a href="product-detail.html">Chi tiết sản phẩm</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h1>Danh Sách Sản Phẩm Đặc Sản</h1>
+            <p>Tổng hợp các nông sản và quà tặng chất lượng nhất đến từ các tỉnh Tây Nguyên.</p>
+        </section>
+
+        <div class="products-layout">
+            <!-- Bộ lọc sidebar -->
+            <aside class="filter-sidebar">
+                <h2>Bộ Lọc Sản Phẩm</h2>
+                <div class="filter-group">
+                    <label for="category-select">Danh mục</label>
+                    <select id="category-select">
+                        <option value="all">Tất cả danh mục</option>
+                        <option value="coffee">Cà phê</option>
+                        <option value="nuts">Hạt dinh dưỡng</option>
+                        <option value="spices">Gia vị</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price-select">Khoảng giá</label>
+                    <select id="price-select">
+                        <option value="all">Tất cả giá</option>
+                        <option value="under-150">Dưới 150.000 VNĐ</option>
+                        <option value="150-300">150.000 - 300.000 VNĐ</option>
+                    </select>
+                </div>
+                <button type="button" class="btn" style="width: 100%;">Lọc sản phẩm</button>
+            </aside>
+
+            <!-- Grid 6 sản phẩm -->
+            <section class="product-grid">
+                <article class="product-card">
+                    <img src="images/ca-phe-buon-ma-thuot.jpg" alt="Cà phê Buôn Ma Thuột đóng hộp">
+                    <div class="content">
+                        <h3>Cà phê Buôn Ma Thuột</h3>
+                        <p>Robusta nguyên chất đậm đà chuẩn vị truyền thống.</p>
+                        <p class="price">150.000 VNĐ</p>
+                        <div class="actions">
+                            <a href="product-detail.html" class="btn btn-outline">Chi tiết sản phẩm</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/mat-ong-rung-tay-nguyen.jpg" alt="Chai mật ong rừng sẫm màu">
+                    <div class="content">
+                        <h3>Mật ong rừng Tây Nguyên</h3>
+                        <p>Mật ong khai thác tự nhiên từ rừng nguyên sinh.</p>
+                        <p class="price">190.000 VNĐ</p>
+                        <div class="actions">
+                            <a href="product-detail.html" class="btn btn-outline">Chi tiết sản phẩm</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/mac-ca-tay-nguyen.jpg" alt="Hạt mắc ca chọn lọc sấy nứt vỏ">
+                    <div class="content">
+                        <h3>Mắc ca Tây Nguyên</h3>
+                        <p>Giàu Omega-3 và dinh dưỡng tốt cho sức khỏe.</p>
+                        <p class="price">180.000 VNĐ</p>
+                        <div class="actions">
+                            <a href="product-detail.html" class="btn btn-outline">Chi tiết sản phẩm</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/tieu-dak-nong.jpg" alt="Túi tiêu đen Đắk Nông hạt mẩy">
+                    <div class="content">
+                        <h3>Tiêu Đắk Nông</h3>
+                        <p>Hạt tiêu mẩy, cay nồng tự nhiên thơm vị đặc trưng.</p>
+                        <p class="price">120.000 VNĐ</p>
+                        <div class="actions">
+                            <a href="product-detail.html" class="btn btn-outline">Chi tiết sản phẩm</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/bo-sap-dak-lak.jpg" alt="Quả bơ sáp Đắk Lắk vỏ xanh dẻo ngon">
+                    <div class="content">
+                        <h3>Bơ sáp Đắk Lắk</h3>
+                        <p>Thịt bơ dẻo quánh, béo ngậy, hạt nhỏ bóc vỏ dễ dàng.</p>
+                        <p class="price">90.000 VNĐ</p>
+                        <div class="actions">
+                            <a href="product-detail.html" class="btn btn-outline">Chi tiết sản phẩm</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/tho-cam-tay-nguyen.jpg" alt="Tấm thổ cẩm dệt thủ công Tây Nguyên">
+                    <div class="content">
+                        <h3>Thổ cẩm Tây Nguyên</h3>
+                        <p>Sản phẩm dệt thủ công mang đậm bản sắc văn hóa dân tộc.</p>
+                        <p class="price">250.000 VNĐ</p>
+                        <div class="actions">
+                            <a href="product-detail.html" class="btn btn-outline">Chi tiết sản phẩm</a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Dự án Đặc sản Tây Nguyên. Tất cả quyền được bảo lưu.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
